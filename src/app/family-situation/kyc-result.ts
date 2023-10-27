@@ -12,6 +12,7 @@ export interface PersonalDetails {
   dateOfBirth?: string
   nationality?: string
   domicile?: string
+  reasoning?: string
 }
 
 export interface CivilStatus {
@@ -32,4 +33,5 @@ export interface Relation {
   domicile: string
   dateOfBirth?: string
   dateOfDeath?: string
+  reasoning?: string
 }
