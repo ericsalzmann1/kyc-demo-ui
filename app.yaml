@@ -3,9 +3,9 @@ runtime: nodejs18  # This specifies the runtime (not relevant for Angular, but r
 service: default-ui
 
 handlers:
-  - url: /(.*\.(js|css|png|jpg|jpeg|gif|ico|json|woff2))$  # Define how to handle static assets
+  - url: /(.*\.(js|css|png|jpg|jpeg|gif|ico|json|woff2|svg))$  # Define how to handle static assets
     static_files: dist/ai-platform-ui/\1
-    upload: dist/ai-platform-ui/.*\.(js|css|png|jpg|jpeg|gif|ico|json|woff2)$
+    upload: dist/ai-platform-ui/.*\.(js|css|png|jpg|jpeg|gif|ico|json|woff2|svg)$
 
   - url: /(.*)
     static_files: dist/ai-platform-ui/index.html  # Handle the Angular app's index.html
