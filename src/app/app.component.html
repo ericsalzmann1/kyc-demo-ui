@@ -1,1 +1,8 @@
-<app-migration></app-migration>
+<ngl-tabset [(selected)]="selectedTab">
+  <ng-template ngl-tab id="family-situation" label="Family Situation">
+    <app-migration></app-migration>
+  </ng-template>
+  <ng-template ngl-tab label="Professional Background">
+    <app-professional-background></app-professional-background>
+  </ng-template>
+</ngl-tabset>

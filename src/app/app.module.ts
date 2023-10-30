@@ -11,6 +11,9 @@ import { RelationshipTableComponent } from './family-situation/relationship-tabl
 import { MigrationComponent } from './migration/migration.component';
 import { LegacyDataComponent } from './legacy-data/legacy-data.component';
 import {NgOptimizedImage} from "@angular/common";
+import { ProfessionalBackgroundComponent } from './professional-background/professional-background.component';
+import { EducationTableComponent } from './professional-background/education-table/education-table.component';
+import { EmploymentTableComponent } from './professional-background/employment-table/employment-table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {NgOptimizedImage} from "@angular/common";
     FamilySituationComponent,
     RelationshipTableComponent,
     MigrationComponent,
-    LegacyDataComponent
+    LegacyDataComponent,
+    ProfessionalBackgroundComponent,
+    EducationTableComponent,
+    EmploymentTableComponent
   ],
     imports: [
         BrowserModule,

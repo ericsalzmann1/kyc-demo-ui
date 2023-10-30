@@ -15,6 +15,11 @@ export class AppComponent {
   documentImage: string = '';
   isLoading = false;
 
+  selectedTab: any = 'family-situation'
+
+  openOne = true
+  openTwo = false
+
   constructor(private http: HttpClient) {}
 
   sendIdData() {

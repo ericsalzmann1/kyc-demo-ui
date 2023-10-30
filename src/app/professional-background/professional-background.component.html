@@ -1,0 +1,25 @@
+<div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-end slds-m-top_large">
+  <div class="slds-col_padded">
+    <ngl-input label="Partner ID" fieldLevelHelpTooltip="Unique identifier of the partner">
+      <input ngl type="text" [required]="true" [disabled]="false" placeholder="Partner ID" [(ngModel)]="partnerId">
+    </ngl-input>
+  </div>
+  <div class="slds-col_padded">
+    <button type="button" nglButton variant="brand" (click)="onProcess()">Get Professional Background</button>
+  </div>
+</div>
+<div style="position:relative; height:6.25rem; z-index:0;"  *ngIf="isLoading">
+  <ngl-spinner alternativeText="Loading"></ngl-spinner>
+</div>
+<div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large" *ngIf="profBackground">
+  <div class="slds-col_padded">
+    <h1>Education</h1>
+    <app-education-table [educations]="profBackground.education.educations"></app-education-table>
+  </div>
+</div>
+<div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large" *ngIf="profBackground">
+  <div class="slds-col_padded">
+    <h1>Employment</h1>
+    <app-employment-table [employments]="profBackground.employment.employments"></app-employment-table>
+  </div>
+</div>
