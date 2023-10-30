@@ -11,15 +11,33 @@
 <div style="position:relative; height:6.25rem; z-index:0;"  *ngIf="isLoading">
   <ngl-spinner alternativeText="Loading"></ngl-spinner>
 </div>
-<div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large" *ngIf="profBackground">
-  <div class="slds-col_padded">
-    <h1>Education</h1>
-    <app-education-table [educations]="profBackground.education.educations"></app-education-table>
+<div *ngIf="profBackground">
+  <div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large">
+    <div class="slds-col_padded">
+      <h1>Education</h1>
+      <app-education-table [educations]="profBackground.education.educations">
+      </app-education-table>
+    </div>
   </div>
-</div>
-<div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large" *ngIf="profBackground">
-  <div class="slds-col_padded">
-    <h1>Employment</h1>
-    <app-employment-table [employments]="profBackground.employment.employments"></app-employment-table>
+  <div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large">
+    <div class="slds-col_padded">
+      <h1>Employment</h1>
+      <app-employment-table [employments]="profBackground.employment.employments">
+      </app-employment-table>
+    </div>
+  </div>
+  <div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large">
+    <div class="slds-col_padded">
+      <h1>Self-Employment</h1>
+      <app-self-employment-table [selfEmployments]="profBackground.selfEmployment.selfEmployments">
+      </app-self-employment-table>
+    </div>
+  </div>
+  <div class="slds-grid slds-grid_pull-padded slds-grid_vertical-align-center slds-m-top_large">
+    <div class="slds-col_padded">
+      <h1>Unemployment</h1>
+      <app-unemployment-table [unemploymentPeriods]="profBackground.unemployment.unemploymentPeriods">
+      </app-unemployment-table>
+    </div>
   </div>
 </div>

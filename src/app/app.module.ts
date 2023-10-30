@@ -14,6 +14,8 @@ import {NgOptimizedImage} from "@angular/common";
 import { ProfessionalBackgroundComponent } from './professional-background/professional-background.component';
 import { EducationTableComponent } from './professional-background/education-table/education-table.component';
 import { EmploymentTableComponent } from './professional-background/employment-table/employment-table.component';
+import { SelfEmploymentTableComponent } from './professional-background/self-employment-table/self-employment-table.component';
+import { UnemploymentTableComponent } from './professional-background/unemployment-table/unemployment-table.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { EmploymentTableComponent } from './professional-background/employment-t
     LegacyDataComponent,
     ProfessionalBackgroundComponent,
     EducationTableComponent,
-    EmploymentTableComponent
+    EmploymentTableComponent,
+    SelfEmploymentTableComponent,
+    UnemploymentTableComponent
   ],
     imports: [
         BrowserModule,
