@@ -9,4 +9,15 @@ import {UnemploymentItem} from "../professional-background.result";
 export class UnemploymentTableComponent {
 
   @Input() unemploymentPeriods: UnemploymentItem[]
+  @Input() background: string
+
+  opened = false
+
+  open() {
+    this.opened = true
+  }
+
+  close() {
+    this.opened = false
+  }
 }

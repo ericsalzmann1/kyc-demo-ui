@@ -8,5 +8,16 @@ import {EducationItem, EmploymentItem} from "../professional-background.result";
 })
 export class EmploymentTableComponent {
 
-  @Input() employments: EmploymentItem[] = []
+  @Input() employments: EmploymentItem[]
+  @Input() background: string
+
+  opened = false
+
+  open() {
+    this.opened = true
+  }
+
+  close() {
+    this.opened = false
+  }
 }

@@ -8,6 +8,16 @@ import {EducationItem} from "../professional-background.result";
 })
 export class EducationTableComponent {
 
-  @Input() educations: EducationItem[] = []
+  @Input() educations: EducationItem[]
+  @Input() background: string
 
+  opened = false
+
+  open() {
+    this.opened = true
+  }
+
+  close() {
+    this.opened = false
+  }
 }

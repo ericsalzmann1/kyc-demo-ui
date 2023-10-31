@@ -9,4 +9,15 @@ import {SelfEmploymentItem} from "../professional-background.result";
 export class SelfEmploymentTableComponent {
 
   @Input() selfEmployments: SelfEmploymentItem[]
+  @Input() background: string
+
+  opened = false
+
+  open() {
+    this.opened = true
+  }
+
+  close() {
+    this.opened = false
+  }
 }

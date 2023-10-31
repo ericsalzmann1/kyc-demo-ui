@@ -7,6 +7,7 @@ export interface ProfessionalBackground {
 
 export interface Education {
   educations: EducationItem[]
+  background: string
 }
 
 export interface EducationItem {
@@ -21,6 +22,7 @@ export interface EducationItem {
 
 export interface Employment {
   employments: EmploymentItem[]
+  background: string
 }
 
 export interface EmploymentItem {
@@ -34,6 +36,7 @@ export interface EmploymentItem {
 
 export interface SelfEmployment {
   selfEmployments: SelfEmploymentItem[]
+  background: string
 }
 
 export interface SelfEmploymentItem {
@@ -60,6 +63,7 @@ export interface Company {
 
 export interface Unemployment {
   unemploymentPeriods: UnemploymentItem[]
+  background: string
 }
 
 export interface UnemploymentItem {
