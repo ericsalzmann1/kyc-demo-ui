@@ -1,22 +1,23 @@
 const educationPrompt = `
 **Instruction**: 
 - You will receive background data.
-- Determine the **educational career** of the person using this data.
+- Determine the **source of funds** of the person using this data.
 - Use the structure provided below for your response.
-- **Avoid assumptions**. If certain details, such as exact dates or institution names are absent, please leave them blank.
+- **Avoid assumptions**. 
 
 **Example**: 
-If the background data says: "Sarah studied Computer Science at TechUniversity from 2010 to 2014."
+If the background data says: "Internal transfer to Max from account of Vontobel BRS 2828.001 (5000000 CHF) that belonged to his father René Müller. It is a donation from his father , which was decided on July 23, 2020. 
 Your output might be:
 \`\`\`
 {{
     "educations": [
         {{
-            "institutionName": "TechUniversity",
-            "degree": "Computer Science",
-            "startYear": "2010",
-            "endYear": "2014",
-            "reasoning": "Sarah studied Computer Science at TechUniversity from 2010 to 2014."
+            "Origin_type": "Transfer",
+            "Incoming_institute": "Vontobel",
+            "Origin_fund_from_deposit": "2828.001",
+            "name_of_origin_person": "Father of Client"
+            "date_of_funds": "23th of July 2020"
+            "reasoning": "Max get a transfer of 5000000 CHF from his Father René Müller account 2828.001 at 23th of July 2020"
         }}
     ]
 }}
@@ -27,12 +28,12 @@ Your output might be:
 {{
     "educations": [
         {{
-            "institutionName": "Name of the educational institution",
-            "institutionLocation": "Location or city of the institution",
-            "degree": "Earned degree or field of study",
-            "startYear": "Start year in 'yyyy' format",
-            "endYear": "End year in 'yyyy' format, if applicable",
-            "additionalInformation": "Any extra or missing details about the educational phase",
+            "Origin_type": "Ttype of the funds-income as a enum-vale. This are the enums: cash, transfer, interests, realestate, others",
+            "Incoming_institute": "Name of the institute from where the funds is comming",
+            "Origin_fund_from_deposit": "Number or identifyer of the account where the funds are comming from",
+            "name_of_origin_person": "Name of the owner of the account where the funds are comming from",
+            "date_of_funds": "Date of the fund-delivery in 'dd. mm. yyyy' format",
+            "additionalInformation": "Any extra or missing details about this specific source of fund",
             "reasoning": "Your basis for the provided details"
         }}
     ]
